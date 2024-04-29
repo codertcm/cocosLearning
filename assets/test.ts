@@ -8,7 +8,7 @@
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class NewClass extends cc.Component {
+export default class Test extends cc.Component {
 
     @property(cc.Label)
     label: cc.Label = null;
@@ -18,11 +18,30 @@ export default class NewClass extends cc.Component {
 
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {}
+    // 初始化调用
+    onLoad () {}
 
+    protected onEnable(): void {
+        
+    }
+
+    
+    // 初始化调用
     start () {
 
     }
 
-    // update (dt) {}
+    update (dt) {}
+
+    protected lateUpdate(dt: number): void {
+        
+    }
+
+    protected onDisable(): void {
+        
+    }
+
+    protected onDestroy(): void {
+        
+    }
 }
