@@ -19,29 +19,35 @@ export default class Test extends cc.Component {
     // LIFE-CYCLE CALLBACKS:
 
     // 初始化调用
-    onLoad () {}
+    onLoad () {
+        console.debug("onLoad");
+    }
 
+    // 启用时调用
     protected onEnable(): void {
-        
+        console.debug("onEnable");
     }
 
     
     // 初始化调用
     start () {
-
+        console.debug("start");
     }
 
+    // 每帧调用， dt：调用间隔时间
     update (dt) {}
 
     protected lateUpdate(dt: number): void {
         
     }
 
+    // 禁用时调用
     protected onDisable(): void {
-        
+        console.debug("onDisable");
     }
 
+    // 销毁时调用
     protected onDestroy(): void {
-        
+        console.debug("onDestroy");
     }
 }
