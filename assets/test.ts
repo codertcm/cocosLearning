@@ -21,6 +21,24 @@ export default class NewClass extends cc.Component {
     // onLoad () {}
 
     start () {
+        // 加载第二个场景
+
+        // cc.director.loadScene("4", function(){
+        //     // 当前已经加载到新的场景了
+
+
+        // });
+
+        // 预加载
+        // cc.director.preloadScene("4", function(){
+        //     // 这个场景加载到内存了，还没有用
+        //     cc.director.loadScene("4");
+        // });
+
+        
+        // cc.game.addPersistRootNode(this.node);
+        // cc.game.removePersistRootNode(this.node);
+
 
     }
 
