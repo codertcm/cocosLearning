@@ -21,8 +21,28 @@ export default class NewClass extends cc.Component {
     // onLoad () {}
 
     start () {
+        this.node.on(cc.Node.EventType.MOUSE_DOWN, function(event){
+            console.debug("鼠标按下了:" + event.getLocation());
+            if(event.getButton() == cc.Event.EventMouse.BUTTON_LEFT){
+                console.debug("左键");
+            } else if(event.getButton() == cc.Event.EventMouse.BUTTON_RIGHT){
+                console.debug("右键");
+            }
+        });
 
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, function(event){
+            console.debug(event.keyCode);
+            if(event.keyCode == cc.macro.KEY.w){
+                console.debug("w");
+            } else if (event.keyCode == cc.macro.KEY.q){
+                console.debug("q");
+            }
+        });
     }
 
     // update (dt) {}
+
+    protected onDestroy(): void {
+        this.node.off(cc.Node.EventType.MOUSE_DOWN);
+    }
 }
